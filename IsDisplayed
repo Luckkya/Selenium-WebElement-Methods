@@ -1,0 +1,28 @@
+package WebElementMethods;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class isDisplayed {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+		
+		boolean logo = driver.findElement(By.cssSelector("img.logoClass")).isDisplayed();
+		
+		if (logo) {
+			
+			System.out.println("logo is visible");
+				
+		}
+		else {
+			System.out.println("Logo not visible");
+		}
+			
+		driver.quit();
+	}
+
+}
