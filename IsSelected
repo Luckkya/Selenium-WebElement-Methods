@@ -1,0 +1,26 @@
+package WebElementMethods;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class isSelected {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+		
+		Boolean dropdown = driver.findElement(By.cssSelector("select#dropdown-class-example")).isSelected();
+		
+		if (dropdown) {
+			
+			System.out.println("Dropdown is selected");			
+		}
+		else 
+		{
+			System.out.println("Dropdown not selected");
+		}
+		driver.quit();
+	}
+
+}
