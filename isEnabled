@@ -1,0 +1,27 @@
+package WebElementMethods;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class isEnabled {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+		
+		Boolean opentab = driver.findElement(By.xpath("//a[@id='opentab']")).isEnabled();
+		
+		if (opentab) {
+			
+			System.out.println(" OpenTab button enabled");			
+		}
+		else {
+			System.out.println("OpenTab button not enabled");
+		}
+		
+		driver.quit();
+	}
+
+}
